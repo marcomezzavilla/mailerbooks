@@ -15,7 +15,7 @@ body {
 }
 
 h1 {
-  font-size: clamp(2rem, calc(1.5rem + 3vw), 4rem); 
+  font-size: clamp(2.25rem, calc(2rem + 3vw), 4rem);
   line-height: 1.1;
 }
 
@@ -52,7 +52,7 @@ p {
 }
 
 .is-clamped {
-  -webkit-box-orient: vertical;  
+  -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   display: -webkit-box;
   overflow: hidden;
@@ -72,15 +72,21 @@ p {
 .nav {
   align-items: center;
   backdrop-filter: blur(10px);
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 1);
   display: flex;
-  font-size: 1.125rem;
   height: 6rem;
   justify-content: space-between;
-  padding: 0 calc(4vw + 4rem);
+  padding: 0 4vw;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 20;
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    font-size: 1.125rem;
+    padding: 0 calc(4vw + 4rem);
+  }
 }
 
 .nav ul {
@@ -92,16 +98,25 @@ p {
 .hero {
   align-items: flex-start;
   background-color: #111;
-  border-radius: .75rem .75rem 0 0 ;
+  border-radius: 0.75rem 0.75rem 0 0;
   color: #f3f3f3;
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 10rem);
+  height: calc(100svh - 8rem);
   justify-content: space-between;
-  margin: 4rem 4vw 0 4vw;
+  margin: 2rem 4vw 0 4vw;
   overflow: hidden;
-  padding: 4rem 4rem 8rem 4rem;
+  padding: 2rem 2rem calc(5rem + 4vw) 2rem;
+  position: relative;
   width: calc(100vw - 8vw);
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    margin: 4rem 4vw 0 4vw;
+    height: calc(100svh - 10rem);
+    padding: 4rem 4rem calc(5rem + 4vw) 4rem;
+  }
 }
 
 .hero-heading {
@@ -113,6 +128,16 @@ p {
   gap: 1rem;
 }
 
+.hero-heading br {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-heading br {
+    display: block;
+  }
+}
+
 .hero-intro {
   border-radius: 40px;
   font-size: 1.125rem;
@@ -122,25 +147,75 @@ p {
 .hero-anchors {
   bottom: 0;
   display: grid;
-  gap: 2rem;
+  gap: 1rem;
   grid-template-columns: repeat(10, 1fr);
-  height: 80px;
-  justify-content: center;
-  overflow: hidden;
+  height: calc(2rem + 4vw);
+  left: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0 2rem;
   position: absolute;
+  scrollbar-width: none;
+  width: 100%;
+}
+
+.hero:before,
+.hero:after {
+  bottom: 0;
+  content: '';
+  height: calc(2rem + 4vw);
+  pointer-events: none;
+  position: absolute;
+  width: 3rem;
+  z-index: 10;
+}
+
+.hero:before {
+  left: 0;
+  background-image: linear-gradient(to right, #111 0%, transparent 100%);
+}
+
+.hero:after {
+  right: 0;
+  background-image: linear-gradient(to right, transparent 0%, #111 100%);
+}
+
+.hero-anchors::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-anchors {
+    padding: 0 4rem;
+    gap: 1.5rem;
+  }
 }
 
 .hero-anchors a {
-  width: 100px
+  display: block;
+  min-width: 80px;
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-anchors a {
+    min-width: unset;
+  }
 }
 
 .hero-anchors img {
   height: 100%;
   object-fit: cover;
   object-position: top center;
-  transform: translateY(40px);
+  transform: translateY(25%);
   transition: transform 0.3s;
   width: 100%;
+}
+
+@media (pointer: coarse) {
+  .hero-anchors img {
+    transform: translateY(0);
+  }
 }
 
 .hero-anchors img:hover {
@@ -159,9 +234,15 @@ p {
   background-color: #fff;
   border-bottom: 2px solid #111;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   min-height: 100vh;
   scroll-margin-top: 6rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .books-item {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .books-item:last-of-type {
@@ -171,26 +252,50 @@ p {
 .books-item .image {
   align-items: center;
   display: flex;
-  height: calc(100vh - 6rem);
-  justify-content: center;
-  position: sticky;
-  top: 6rem;
+  justify-content: flex-start;
+  margin: 4rem 4vw;
+}
+
+@media screen and (min-width: 1024px) {
+  .books-item .image {
+    height: calc(100vh - 6rem);
+    justify-content: center;
+    margin: 0;
+    position: sticky;
+    top: 6rem;
+  }
 }
 
 .books-item .image img {
-  height: 40vh;
+  height: auto;
+  max-width: 260px;
+  width: 50%;
+}
+
+@media screen and (min-width: 1024px) {
+  .books-item .image img {
+    height: 40vh;
+    max-width: unset;
+    width: auto;
+  }
 }
 
 .books-item .text {
-  margin-top: 24vh;
-  padding: 0 4rem;
-  margin-bottom: 24vh;
+  padding: 0 4vw;
+  margin-bottom: 4rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .books-item .text {
+    margin-top: 24vh;
+    padding: 0 4rem;
+    margin-bottom: 24vh;
+  }
 }
 
 .books-item .author {
   margin-top: 0.5rem;
   font-weight: 600;
-  /* opacity: 0.5; */
   margin-bottom: 1.5rem;
 }
 
@@ -224,5 +329,11 @@ p {
 
 .footer {
   background-color: #f3f4f6;
-  padding: 6rem calc(4vw + 4rem);
+  padding: 6rem 4vw;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 6rem calc(4vw + 4rem);
+  }
 }
