@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mailer Books</title>
 
+    <link rel="preconnect" href="https://fonts.bunny.net" />
+    <link
+      href="https://fonts.bunny.net/css?family=inter:300,400,500,600|varela-round:400"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="assets/js/site.js" defer></script>
   </head>
 
   <body>
     <nav class="nav">
-      <div class="logo">mailer books</div>
+      <a href="#" class="nav-logo">mailer <span>books</span></a>
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Books</a></li>
@@ -31,9 +38,11 @@
           </h1>
         </article>
 
-        <a class="button is-big" href="#books">Explore</a>
+        <a class="button is-big" href="#books"
+          >Explore <span class="arrow">↓</span></a
+        >
 
-        <div class="hero-anchors">
+        <div class="hero-anchors fade-in">
           <a href="#book1">
             <img
               src="assets/images/infinite-jest.jpg"
@@ -46,20 +55,60 @@
               alt="The Invincible book cover."
             />
           </a>
-          <a href="#book3"></a>
-          <a href="#book4"></a>
-          <a href="#book5"></a>
-          <a href="#book6"></a>
-          <a href="#book7"></a>
-          <a href="#book8"></a>
-          <a href="#book9"></a>
-          <a href="#book10"></a>
+          <a href="#book3">
+            <img
+              src="assets/images/the-star-rover.jpg"
+              alt="The Star Rover book cover."
+            />
+          </a>
+          <a href="#book4">
+            <img
+              src="assets/images/the-master-and-margarita.jpg"
+              alt="The Master and Margarita book cover."
+            />
+          </a>
+          <a href="#book5">
+            <img
+              src="assets/images/glass-houses.jpg"
+              alt="Glass Houses book cover."
+            />
+          </a>
+          <a href="#book6">
+            <img
+              src="assets/images/the-leaf-thief.jpg"
+              alt="The Leaf Thief book cover."
+            />
+          </a>
+          <a href="#book7">
+            <img
+              src="assets/images/the-tongue-set-free.jpg"
+              alt="The Tongue Set Free book cover."
+            />
+          </a>
+          <a href="#book8">
+            <img
+              src="assets/images/the-art-of-looking-sideways.jpg"
+              alt="The Tongue Set Free book cover."
+            />
+          </a>
+          <a href="#book9">
+            <img
+              src="assets/images/the-ballad-of-the-salty-sea.jpg"
+              alt="The Ballad of the Salty Sea book cover."
+            />
+          </a>
+          <a href="#book10">
+            <img
+              src="assets/images/the-long-goodbye.jpg"
+              alt="The Long Goodbye book cover."
+            />
+          </a>
         </div>
       </div>
 
       <div id="books" class="books">
         <section id="book1" class="books-item infinite-jest">
-          <figure class="image">
+          <figure class="image fade-in">
             <img
               src="assets/images/infinite-jest.jpg"
               alt="Infinite Jest book cover."
@@ -68,6 +117,27 @@
           <article class="text">
             <h2>Infinite Jest</h2>
             <p class="author is-small">— David Foster Wallace</p>
+            <div class="cta">
+              <a class="button" href="#">Buy</a>
+              <a class="share" href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"
+                  />
+                </svg>
+
+                <span>Share</span></a
+              >
+            </div>
             <div class="is-small _is-clamped description">
               <p>
                 A gargantuan, mind-altering tragi-comedy about the Pursuit of
@@ -96,15 +166,11 @@
                 <span>Genres</span> <span>Fiction, Novels, Contemporary</span>
               </li>
             </ul>
-            <div class="cta">
-              <a class="button" href="#">Buy</a>
-              <a href="">Share</a>
-            </div>
           </article>
         </section>
 
-        <section id="book2" class="books-item infinite-jest">
-          <figure class="image">
+        <section id="book2" class="books-item the-invincible">
+          <figure class="image fade-in">
             <img
               src="assets/images/the-invincible-2.jpg"
               alt="The Invincible book cover."
@@ -113,6 +179,27 @@
           <article class="text">
             <h2>The Invincible</h2>
             <p class="author is-small">— Stanislaw Lem</p>
+            <div class="cta">
+              <a class="button" href="#">Buy</a>
+              <a class="share" href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"
+                  />
+                </svg>
+
+                <span>Share</span></a
+              >
+            </div>
             <div class="is-small _is-clamped description">
               <p>
                 A space cruiser, in search of its sister ship, encounters beings
@@ -138,15 +225,519 @@
               <li><span>First published</span> <span>1964</span></li>
               <li><span>Genres</span> <span>Fantasy, Science fiction</span></li>
             </ul>
+          </article>
+        </section>
+
+        <section id="book3" class="books-item the-star-rover">
+          <figure class="image fade-in">
+            <img
+              src="assets/images/the-star-rover.jpg"
+              alt="The Star Rover book cover."
+            />
+          </figure>
+          <article class="text">
+            <h2>The Star Rover</h2>
+            <p class="author is-small">— Jack London</p>
             <div class="cta">
               <a class="button" href="#">Buy</a>
-              <a href="">Share</a>
+              <a class="share" href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"
+                  />
+                </svg>
+
+                <span>Share</span></a
+              >
             </div>
+            <div class="is-small _is-clamped description">
+              <p>
+                The Star Rover is the story of San Quentin death-row inmate
+                Darrell Standing, who escapes the horror of prison life—and long
+                stretches in a straitjacket—by withdrawing into vivid dreams of
+                past lives, including incarnations as a French nobleman and an
+                Englishman in medieval Korea.
+              </p>
+              <p>
+                Based on the life and imprisonment of Jack London’s friend Ed
+                Morrell, this is one of the author’s most complex and original
+                works. As Lorenzo Carcaterra argues in his Introduction, The
+                Star Rover is “written with energy and force, brilliantly
+                marching between the netherworlds of brutality and beauty.” This
+                Modern Library Paperback Classic is set from the text of the
+                first American edition, published in 1915.
+              </p>
+            </div>
+            <ul class="info">
+              <li><span>First published</span> <span>1915</span></li>
+              <li><span>Genres</span> <span>Fiction, Classics</span></li>
+            </ul>
+          </article>
+        </section>
+
+        <section id="book4" class="books-item the-master-and-margarita">
+          <figure class="image fade-in">
+            <img
+              src="assets/images/the-master-and-margarita.jpg"
+              alt="The Master and Margarita book cover."
+            />
+          </figure>
+          <article class="text">
+            <h2>The Master and Margarita</h2>
+            <p class="author is-small">— Mikhail Bulgakov</p>
+            <div class="cta">
+              <a class="button" href="#">Buy</a>
+              <a class="share" href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"
+                  />
+                </svg>
+
+                <span>Share</span></a
+              >
+            </div>
+            <div class="is-small _is-clamped description">
+              <p>
+                The underground masterpiece of twentieth-century Russian
+                fiction, this classic novel was written during Stalin’s regime
+                and could not be published until many years after its author’s
+                death. When the devil arrives in 1930s Moscow, consorting with a
+                retinue of odd associates—including a talking black cat, an
+                assassin, and a beautiful naked witch—his antics wreak havoc
+                among the literary elite of the world capital of atheism.
+                Meanwhile, the Master, author of an unpublished novel about
+                Jesus and Pontius Pilate, languishes in despair in a pyschiatric
+                hospital, while his devoted lover, Margarita, decides to sell
+                her soul to save him.
+              </p>
+              <p>
+                As Bulgakov’s dazzlingly exuberant narrative weaves back and
+                forth between Moscow and ancient Jerusalem, studded with scenes
+                ranging from a giddy Satanic ball to the murder of Judas in
+                Gethsemane, Margarita’s enduring love for the Master joins the
+                strands of plot across space and time.
+              </p>
+            </div>
+            <ul class="info">
+              <li><span>First published</span> <span>1967</span></li>
+              <li>
+                <span>Genres</span>
+                <span>Fantasy, Russian Literature, Magical Realism</span>
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <section id="book5" class="books-item glass-houses">
+          <figure class="image fade-in">
+            <img
+              src="assets/images/glass-houses.jpg"
+              alt="Glass Houses book cover."
+            />
+          </figure>
+          <article class="text">
+            <h2>Glass Houses</h2>
+            <p class="author is-small">— Louise Penny</p>
+            <div class="cta">
+              <a class="button" href="#">Buy</a>
+              <a class="share" href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"
+                  />
+                </svg>
+
+                <span>Share</span></a
+              >
+            </div>
+            <div class="is-small _is-clamped description">
+              <p>
+                When a mysterious figure appears in Three Pines one cold
+                November day, Armand Gamache and the rest of the villagers are
+                at first curious. Then wary. Through rain and sleet, the figure
+                stands unmoving, staring ahead.
+              </p>
+              <p>
+                From the moment the creature's shadow falls over the village,
+                Gamache, now Chief Superintendent of the Sûreté du Quebec,
+                suspects it has deep roots and a dark purpose. Yet he does
+                nothing. What can he do? Only watch and wait. And hope his
+                mounting fears are not realized.
+              </p>
+              <p>
+                But when the figure vanishes overnight and a body is discovered,
+                it falls to Gamache to discover if a debt has been paid or
+                levied.
+              </p>
+              <p>
+                Months later, on a steamy July day, as the trial for the accused
+                begins in Montréal, Chief Superintendent Gamache continues to
+                struggle with actions he set in motion that bitter November from
+                which there is no going back. More than the accused is on trial.
+                Gamache's own conscience is standing in judgment.
+              </p>
+              <p>
+                In her latest utterly gripping book, number-one New York Times
+                bestselling author Louise Penny shatters the conventions of the
+                crime novel to explore what Gandhi called the court of
+                conscience. A court that supersedes all others.
+              </p>
+            </div>
+            <ul class="info">
+              <li><span>First published</span> <span>2017</span></li>
+              <li>
+                <span>Genres</span>
+                <span>Mystery, Crime, Thriller</span>
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <section id="book6" class="books-item the-leaf-thief">
+          <figure class="image fade-in">
+            <img
+              src="assets/images/the-leaf-thief.jpg"
+              alt="The Leaf Thief book cover."
+            />
+          </figure>
+          <article class="text">
+            <h2>The Leaf Thief</h2>
+            <p class="author is-small">— Alice Hemming, Nicola Slater</p>
+            <div class="cta">
+              <a class="button" href="#">Buy</a>
+              <a class="share" href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"
+                  />
+                </svg>
+
+                <span>Share</span></a
+              >
+            </div>
+            <div class="is-small _is-clamped description">
+              <p>
+                A brilliantly funny picture book about seasons, written by Alice
+                Hemming and illustrated by Nicola Slater. Squirrel is so cross.
+                Yesterday there were loads of beautiful leaves on his tree, but
+                today? Today some are missing and Squirrel is convinced that
+                someone has stolen them... there's a leaf thief on the loose!
+              </p>
+              <p>
+                Join Squirrel on a mission to find the culprit, and meet so many
+                fun animals on the way, while you find out how the world takes
+                on different colours as the months pass by. A laugh-out-loud
+                book about the changing seasons, with extra information in the
+                back for especially curious minds Perfect as a companion reader
+                to children learning about seasons in school A brilliant picture
+                book that explores feelings, moods and times where we feel out
+                of control.
+              </p>
+            </div>
+            <ul class="info">
+              <li><span>First published</span> <span>2020</span></li>
+              <li>
+                <span>Genres</span>
+                <span>Picture Books, Childrens, Nature</span>
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <section id="book7" class="books-item the-tongue-set-free">
+          <figure class="image fade-in">
+            <img
+              src="assets/images/the-tongue-set-free.jpg"
+              alt="The Tongue Set Free book cover."
+            />
+          </figure>
+          <article class="text">
+            <h2>The Tongue Set Free</h2>
+            <p class="author is-small">— Elias Canetti</p>
+            <div class="cta">
+              <a class="button" href="#">Buy</a>
+              <a class="share" href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"
+                  />
+                </svg>
+
+                <span>Share</span></a
+              >
+            </div>
+            <div class="is-small _is-clamped description">
+              <p>
+                Elias Canetti, winner of the 1981 Nobel Prize in Literature, was
+                one of the major intellectual figures and polymaths of the
+                twentieth century. A master of many genres, he is known
+                especially for his novel, Auto da Fe, and his great work of
+                social theory, Crowds and Power. But Canetti's genius is perhaps
+                nowhere more evident than in the three volumes of his
+                autobiography. This first volume, Tongue Set Free, provides a
+                searching portrait of the author's personal background and
+                creative development as it presents the events, personalities
+                (especially Canetti's mother), and intellectual forces that
+                shaped the growth of the artist as a young man.
+              </p>
+            </div>
+            <ul class="info">
+              <li><span>First published</span> <span>1977</span></li>
+              <li>
+                <span>Genres</span>
+                <span>Nonfiction, Biography, Memoir</span>
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <section id="book8" class="books-item the-art-of-looking-sideways">
+          <figure class="image fade-in">
+            <img
+              src="assets/images/the-art-of-looking-sideways.jpg"
+              alt="The Tongue Set Free book cover."
+            />
+          </figure>
+          <article class="text">
+            <h2>The Art of Looking Sideways</h2>
+            <p class="author is-small">— Alan Fletcher</p>
+            <div class="cta">
+              <a class="button" href="#">Buy</a>
+              <a class="share" href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"
+                  />
+                </svg>
+
+                <span>Share</span></a
+              >
+            </div>
+            <div class="is-small _is-clamped description">
+              <p>
+                The Art of Looking Sideways is a primer in visual intelligence,
+                an exploration of the workings of the eye, the hand, the brain
+                and the imagination. It is an inexhaustible mine of anecdotes,
+                quotations, images, curious facts and useless information,
+                oddities, serious science, jokes and memories, all concerned
+                with the interplay between the verbal and the visual, and the
+                limitless resources of the human mind. Loosely arranged in 72
+                chapters, all this material is presented in a wonderfully
+                inventive series of pages that are themselves masterly
+                demonstrations of the expressive use of type, space, color and
+                imagery.
+              </p>
+              <p>
+                This book does not set out to teach lessons, but it is full of
+                wisdom and insight collected from all over the world. Describing
+                himself as a visual jackdaw, master designer Alan Fletcher has
+                distilled a lifetime of experience and reflection into a
+                brilliantly witty and inimitable exploration of such subjects as
+                perception, color, pattern, proportion, paradox, illusion,
+                language, alphabets, words, letters, ideas, creativity, culture,
+                style, aesthetics and value.
+              </p>
+            </div>
+            <ul class="info">
+              <li><span>First published</span> <span>2001</span></li>
+              <li>
+                <span>Genres</span>
+                <span>Design, Art, Essays</span>
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <section id="book9" class="books-item the-ballad-of-the-salty-sea">
+          <figure class="image fade-in">
+            <img
+              src="assets/images/the-ballad-of-the-salty-sea.jpg"
+              alt="The Ballad of the Salty Sea book cover."
+            />
+          </figure>
+          <article class="text">
+            <h2>The Ballad of the Salty Sea</h2>
+            <p class="author is-small">— Hugo Pratt</p>
+            <div class="cta">
+              <a class="button" href="#">Buy</a>
+              <a class="share" href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"
+                  />
+                </svg>
+
+                <span>Share</span></a
+              >
+            </div>
+            <div class="is-small _is-clamped description">
+              <p>
+                Celebrate this milestone in the history of graphic novels,
+                winner of the world's first-ever "Best Graphic Novel" award,
+                taking the prize in 1976 at the Angoulême Fesitval. Originally
+                serialized beginning in 1967, this book is universally
+                acknowledged as Hugo Pratt's masterpiece, in which he introduces
+                Corto Maltese to the world.
+              </p>
+              <p>
+                Corto is but one of a strong ensemble cast of characters whose
+                lives permeate the entire 12-book series. It is here that we
+                also meet the young and beautiful Pandora, her brother Cain, the
+                mysterious criminal mastermind Monk, the grim and ferocious
+                Rasputin, Lieutenant Slutter of the German Navy, and the natives
+                Skull and Tarao. The Ballad of the Salty Sea is also hailed as
+                the first example of the literary comic strip.
+              </p>
+              <p>
+                Pratt was inspired by Conrad, Stevenson, and London, but even
+                more directly by Henry de Vere Stacpool's Blue Lagoon, from
+                which the author got the idea of a small island in the Pacific
+                which he named "Escondida." The action begins in November 1913
+                in the South Seas as feelings of the Great War were already
+                looming but the romantic ideals of the nineteenth century were
+                still alive. The pace of the narrative and the drawings are very
+                modern and Pratt permeates the adventure with an extraordinary
+                atmosphere of the great outdoors. The story captures the
+                imagination of the reader from the opening pages with a tight,
+                compelling storyline that can be interpreted on different
+                levels.
+              </p>
+            </div>
+            <ul class="info">
+              <li><span>First published</span> <span>1967</span></li>
+              <li>
+                <span>Genres</span>
+                <span>Design, Art, Essays</span>
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <section id="book10" class="books-item the-long-goodbye">
+          <figure class="image fade-in">
+            <img
+              src="assets/images/the-long-goodbye.jpg"
+              alt="The Long Goodbye book cover."
+            />
+          </figure>
+          <article class="text">
+            <h2>The Long Goodbye</h2>
+            <p class="author is-small">— Raymond Chandler</p>
+            <div class="cta">
+              <a class="button" href="#">Buy</a>
+              <a class="share" href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"
+                  />
+                </svg>
+
+                <span>Share</span></a
+              >
+            </div>
+            <div class="is-small _is-clamped description">
+              <p>
+                Down-and-out drunk Terry Lennox has a problem: his millionaire
+                wife is dead and he needs to get out of LA fast. So he turns to
+                the only friend he can trust: private investigator Philip
+                Marlowe. Marlowe is willing to help a man down on his luck, but
+                later Lennox commits suicide in Mexico and things start to turn
+                nasty. Marlowe is drawn into a sordid crowd of adulterers and
+                alcoholics in LA's Idle Valley, where the rich are suffering one
+                big suntanned hangover. Marlowe is sure Lennox didn't kill his
+                wife, but how many stiffs will turn up before he gets to the
+                truth?
+              </p>
+            </div>
+            <ul class="info">
+              <li><span>First published</span> <span>1953</span></li>
+              <li>
+                <span>Genres</span>
+                <span>Fiction, Crime, Noir</span>
+              </li>
+            </ul>
           </article>
         </section>
       </div>
     </main>
 
-    <div class="footer">...</div>
+    <div class="footer">
+      <p>
+        <small> 2010 - 2024 © MailerLite. All rights reserved. </small>
+      </p>
+    </div>
   </body>
 </html>

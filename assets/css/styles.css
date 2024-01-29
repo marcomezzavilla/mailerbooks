@@ -9,8 +9,8 @@ html {
 }
 
 body {
-  font-family: Inter, Helvetica Neue, Arial, sans-serif;
-  background-image: linear-gradient(120deg, #ddd 0%, #fff 100%);
+  background-color: #111;
+  font-family: Inter, -apple-system, Arial, sans-serif;
   font-size: 1.4;
 }
 
@@ -51,6 +51,17 @@ p {
   font-size: 1.25rem;
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: opacity 0.4s 0.1s, transform 0.4s 0.1s;
+}
+
+.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .is-clamped {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
@@ -60,13 +71,18 @@ p {
 
 .button {
   background-color: #09c269;
-  border-radius: 0.75rem;
+  border-radius: 0.625rem;
   border: 0;
   color: #fff;
   cursor: pointer;
   display: inline-block;
   padding: 0.75em 1.25em;
   text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #079b54;
 }
 
 .nav {
@@ -95,20 +111,63 @@ p {
   list-style-type: none;
 }
 
+.nav-logo {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 1.25rem;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-logo {
+    font-size: 1.5rem;
+  }
+}
+
+.nav-logo span {
+  background-color: #09c269;
+  border-radius: 0.25rem 0.25rem 0.35rem 0;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  font-weight: 500;
+  position: absolute;
+  transform: translate(0.25rem, -0.75rem);
+}
+
+@media screen and (min-width: 768px) {
+  .nav-logo span {
+    font-size: 1rem;
+  }
+}
+
+.nav-logo span:before {
+  border-right: 0.5rem solid transparent;
+  border-top: 0.5rem solid #09c269;
+  bottom: -0.5rem;
+  content: '';
+  height: 0;
+  left: 0;
+  position: absolute;
+  width: 0;
+}
+
 .hero {
+  /* background-image: linear-gradient(90deg, #bacbc1, #66ac7b); */
   align-items: flex-start;
-  background-color: #111;
+  background-color: #d7f5e7;
   border-radius: 0.75rem 0.75rem 0 0;
-  color: #f3f3f3;
+  color: #111;
   display: flex;
   flex-direction: column;
+  gap: 1rem;
   height: calc(100svh - 8rem);
   justify-content: space-between;
   margin: 2rem 4vw 0 4vw;
+  min-height: 520px;
   overflow: hidden;
   padding: 2rem 2rem calc(5rem + 4vw) 2rem;
   position: relative;
   width: calc(100vw - 8vw);
+  z-index: 2;
 }
 
 @media screen and (min-width: 768px) {
@@ -139,9 +198,29 @@ p {
 }
 
 .hero-intro {
-  border-radius: 40px;
   font-size: 1.125rem;
   margin-bottom: 1rem;
+}
+
+.hero .button {
+  background-color: #fff;
+  border-radius: 0.75rem;
+  color: #111;
+  transition: box-shadow 0.3s;
+}
+
+.hero .button .arrow {
+  display: inline-flex;
+  position: relative;
+  transition: transform 0.4s;
+}
+
+.hero .button:hover {
+  box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.3);
+}
+
+.hero .button:hover .arrow {
+  transform: translateY(0.25rem);
 }
 
 .hero-anchors {
@@ -172,12 +251,12 @@ p {
 
 .hero:before {
   left: 0;
-  background-image: linear-gradient(to right, #111 0%, transparent 100%);
+  background-image: linear-gradient(to right, #d7f5e7 0%, transparent 100%);
 }
 
 .hero:after {
   right: 0;
-  background-image: linear-gradient(to right, transparent 0%, #111 100%);
+  background-image: linear-gradient(to right, transparent 0%, #d7f5e7 100%);
 }
 
 .hero-anchors::-webkit-scrollbar {
@@ -194,6 +273,7 @@ p {
 .hero-anchors a {
   display: block;
   min-width: 80px;
+  opacity: 0;
   width: 100%;
 }
 
@@ -231,17 +311,20 @@ p {
 }
 
 .books-item {
+  /* border-bottom: 2px solid #111; */
   background-color: #fff;
-  border-bottom: 2px solid #111;
   display: grid;
   grid-template-columns: 1fr;
   min-height: 100vh;
+  overflow: hidden;
+  position: relative;
   scroll-margin-top: 6rem;
 }
 
 @media screen and (min-width: 1024px) {
   .books-item {
     grid-template-columns: 1fr 1fr;
+    overflow: unset;
   }
 }
 
@@ -254,6 +337,8 @@ p {
   display: flex;
   justify-content: flex-start;
   margin: 4rem 4vw;
+  overflow: hidden;
+  z-index: 5;
 }
 
 @media screen and (min-width: 1024px) {
@@ -269,7 +354,13 @@ p {
 .books-item .image img {
   height: auto;
   max-width: 260px;
+  position: relative;
   width: 50%;
+  transition: transform 0.4s;
+}
+
+.books-item .image img:hover {
+  transform: scale(1.05);
 }
 
 @media screen and (min-width: 1024px) {
@@ -294,9 +385,39 @@ p {
 }
 
 .books-item .author {
-  margin-top: 0.5rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.books-item .cta {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.books-item .share {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  color: #777;
+  cursor: pointer;
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.675em 1rem;
+  transition: background-color 0.3s;
+  z-index: 5;
+}
+
+.books-item .share:hover {
+  background-color: #f3f3f3;
+}
+
+.books-item .share svg {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
 }
 
 .books-item .description {
@@ -320,11 +441,65 @@ p {
   padding: 1rem 0;
 }
 
-.books-item .cta {
-  align-items: center;
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
+.books-item:after {
+  border-radius: 50%;
+  content: '';
+  height: 100vmax;
+  left: 0;
+  opacity: 0.2;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -50%);
+  width: 100vmax;
+  z-index: 1;
+}
+
+@media screen and (min-width: 1024px) {
+  .books-item:after {
+    height: 150vmin;
+    width: 150vmin;
+  }
+}
+
+.infinite-jest:after {
+  background: radial-gradient(rgb(89, 137, 226) 0%, transparent 70%);
+}
+
+.the-invincible:after {
+  background: radial-gradient(rgb(144, 30, 30) 0%, transparent 70%);
+}
+
+.the-star-rover:after {
+  background: radial-gradient(#111 0%, transparent 70%);
+}
+
+.the-master-and-margarita:after {
+  background: radial-gradient(#d2c258 0%, transparent 70%);
+}
+
+.glass-houses:after {
+  background: radial-gradient(#4b9560 0%, transparent 70%);
+}
+
+.the-leaf-thief:after {
+  background: radial-gradient(#c0992f 0%, transparent 70%);
+}
+
+.the-tongue-set-free:after {
+  background: radial-gradient(#1a555b 0%, transparent 70%);
+}
+
+.the-art-of-looking-sideways:after {
+  background: radial-gradient(#dd1a1a 0%, transparent 70%);
+}
+
+.the-ballad-of-the-salty-sea:after {
+  background: radial-gradient(#1d212e 0%, transparent 70%);
+}
+
+.the-long-goodbye:after {
+  background: radial-gradient(#ff9a9a 0%, transparent 70%);
 }
 
 .footer {
