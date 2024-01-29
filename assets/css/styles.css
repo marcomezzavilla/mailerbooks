@@ -308,6 +308,7 @@ p {
   display: flex;
   flex-direction: column;
   scroll-margin-top: 6rem;
+  position: relative;
 }
 
 .books-item {
@@ -502,6 +503,47 @@ p {
   background: radial-gradient(#ff9a9a 0%, transparent 70%);
 }
 
+.navigation {
+  align-self: flex-start;
+  background-image: linear-gradient(to top, #fff 0%, transparent 100%);
+  bottom: 0;
+  display: flex;
+  gap: 0.5rem;
+  left: 0;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  padding: 2rem 4vw 1rem 4vw;
+  pointer-events: none;
+  position: sticky;
+  width: 100%;
+  z-index: 10;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation {
+    background-image: none;
+    padding: 1rem 4vw;
+    width: unset;
+  }
+}
+
+.navigation-item {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  border: 1px solid #ddd;
+  display: flex;
+  height: 36px;
+  justify-content: center;
+  pointer-events: all;
+  width: 36px;
+}
+
+.navigation-item.is-inactive {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
 .footer {
   background-color: #f3f4f6;
   padding: 6rem 4vw;
@@ -509,6 +551,6 @@ p {
 
 @media screen and (min-width: 768px) {
   .footer {
-    padding: 6rem calc(4vw + 4rem);
+    padding: 6rem 4vw;
   }
 }
